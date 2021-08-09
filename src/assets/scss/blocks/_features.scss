@@ -1,0 +1,133 @@
+.section-features {
+  padding: $base * 16 0 $base * 13 0;
+
+  .features {
+    &__content {
+      text-align: center;
+      color: $gray-300;
+      max-width: 93%;
+      margin: 0 auto $base * 21;
+
+      @include lg {
+        max-width: 80%;
+      }
+
+      &-title {
+        font-size: $fs-xx-large;
+        margin-bottom: $base * 5;
+
+        @include lg {
+          font-size: $base * 7;
+        }
+
+        @include md {
+          font-size: $base * 6;
+        }
+      }
+
+      &-text {
+        line-height: 1.2;
+        font-size: $fs-small;
+        letter-spacing: 0.5px;
+
+        @include lg {
+          font-size: $base * 3.5;
+        }
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+
+      @include md {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 50%;
+        gap: $base * 6;
+        margin: 0 auto;
+      }
+
+      &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $base * 45;
+        height: $base * 45;
+        border-radius: 100%;
+        position: relative;
+
+        @include lg {
+          width: $base * 40;
+          height: $base * 40;
+        }
+
+        @include md {
+          margin-bottom: $base * 5;
+        }
+
+        &--cian {
+          background-color: $cian-500;
+        }
+
+        &--green {
+          background-color: $green-500;
+        }
+
+        &--pink {
+          background-color: $pink-500;
+        }
+
+        &--brown {
+          background-color: $brown-500;
+        }
+
+        &-icon {
+          width: $base * 20;
+          height: $base * 20;
+          transition: opacity 0.4s linear;
+
+          @include lg {
+            width: $base * 15;
+            height: $base * 15;
+          }
+        }
+
+        &-text {
+          font-size: $fs-small;
+          color: $white-500;
+          text-align: center;
+          margin-top: $base * 2;
+          transition: opacity 0.4s linear;
+        }
+
+        &-side-text {
+          opacity: 0;
+          color: $white-500;
+          font-size: $fs-xx-small;
+          width: 90%;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 1;
+          transform: translate(-50%, -50%);
+          line-height: 1.2;
+          transition: opacity 0.4s linear;
+        }
+
+        &:hover {
+          .features__list-item-icon,
+          .features__list-item-text {
+            opacity: 0;
+          }
+
+          .features__list-item-side-text {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

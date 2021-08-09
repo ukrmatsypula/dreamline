@@ -1,0 +1,49 @@
+@mixin UniversLT {
+  font-family: "UniversLT", sans-serif;
+  font-weight: 300;
+}
+
+@mixin AlteHaasGrotesk {
+  font-family: "AlteHaasGrotesk", sans-serif;
+  font-weight: 700;
+}
+
+@mixin SegoeUI {
+  font-family: "SegoeUI", sans-serif;
+}
+
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-min - 1px}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min - 1px}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-min - 1px}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-min - 1px}) {
+      @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (max-width: $screen+'px') {
+      @content;
+  }
+}

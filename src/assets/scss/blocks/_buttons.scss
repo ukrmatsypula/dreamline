@@ -1,0 +1,42 @@
+.btn {
+  display: flex;
+  vertical-align: middle;
+  padding: $base;
+  margin: 0;
+  background-color: $gray-50;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 0;
+  transition: color 0.2s linear, background-color 0.2s linear;
+  color: $white-500;
+
+  &:hover {
+    background-color: lighten($gray-50, 5%);
+    color: lighten($white-500, 20%);
+  }
+
+  &.btn--primary {
+    background: $pink-500;
+
+    &:hover {
+      background-color: lighten($pink-500, 10%);
+      color: lighten($white-500, 10%);
+    }
+  }
+
+  &--with-icon {
+    position: relative;
+    border-radius: $base;
+
+    .icon {
+      width: $base * 3;
+      height: $base * 3;
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      z-index: 1;
+      transform: translate(0%, -50%);
+    }
+  }
+}

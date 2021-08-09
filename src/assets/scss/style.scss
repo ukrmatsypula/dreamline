@@ -1,0 +1,54 @@
+@import "fonts";
+
+//Vendor
+@import "vendor/reset.scss";
+
+@import "_vars.scss";
+@import "mixins.scss";
+
+@import "_icons.scss";
+
+// Blocks
+@import "_icons.scss";
+@import "blocks/_buttons.scss";
+@import "blocks/_header.scss";
+@import "blocks/_hero-image.scss";
+@import "blocks/_features.scss";
+@import "blocks/_blog.scss";
+@import "blocks/_social.scss";
+@import "blocks/_footer.scss";
+
+:root {
+  @include UniversLT;
+  font-size: $fs-x-small;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.page {
+  overflow: hidden;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+svg {
+  width: $base * 20;
+  height: $base * 20;
+  fill: $white-500;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}

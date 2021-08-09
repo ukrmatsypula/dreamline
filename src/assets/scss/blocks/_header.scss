@@ -1,0 +1,118 @@
+.section-header {
+  background-color: rgba($white-500, 0.9);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  .section-inner {
+    .main-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: $base * 23;
+    }
+
+    .nav-wrapper {
+      @include SegoeUI;
+
+      display: flex;
+      align-items: center;
+      color: $gray-500;
+      transition: transform 0.4s linear;
+
+      @include md {
+        display: none;
+      }
+
+      &--active {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.85);
+        color: $white-500;
+        padding: $base * 4 0;
+        height: auto;
+        overflow: auto;
+        height: calc(100vh - 90px);
+        transform: translateX(0);
+
+        .nav-wrapper__item {
+          padding: $base * 4;
+        }
+      }
+
+      &__item {
+        &-link {
+          text-decoration: none;
+          color: inherit;
+          font-size: $fs-small;
+          padding: $base * 5;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .btn-login {
+        margin-left: $base * 3;
+        padding: $base * 1 $base * 6;
+        margin-right: $base * 9;
+        font-size: $fs-small;
+
+        @include md {
+          margin: $base * 5 0 0 0;
+        }
+      }
+    }
+  }
+
+  .burger {
+    position: relative;
+    width: 30px;
+    height: 23px;
+    padding: 0;
+    background: none;
+    border: 0;
+    display: none;
+    font-size: 0;
+    color: transparent;
+
+    &__line:nth-child(1) {
+      width: 80%;
+      margin-left: auto;
+    }
+
+    @include md {
+      display: block;
+    }
+
+    &--active {
+      .burger__line:nth-child(1) {
+        width: 0%;
+        margin-left: auto;
+      }
+
+      .burger__line:nth-child(4) {
+        width: 0%;
+        margin-right: auto;
+      }
+    }
+
+    &__line {
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: $dark-500;
+      margin: 3px 0;
+      transition: width 0.4s linear;
+    }
+  }
+}

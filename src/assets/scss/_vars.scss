@@ -1,0 +1,45 @@
+$fs-xx-small: 12px;
+$fs-x-small: 15px;
+$fs-small: 17px;
+$fs-medium: 21px;
+$fs-large: 25px;
+$fs-x-large: 27px;
+$fs-xx-large: 35px;
+$fs-xxx-large: 70px;
+
+$white-500: #fff;
+
+$cian-500: #4eb9f4;
+
+$green-500: #6fc125;
+
+$pink-500: #ff5649;
+
+$brown-500: #e48f23;
+
+$dark-500: #000000;
+
+$gray-50: #aeaeae;
+$gray-100: #8b8b8b;
+$gray-300: #696b6a;
+$gray-400: #404040;
+$gray-500: #454545;
+$gray-600: #242223;
+
+$base: 4px;
+
+$mobile: 575;
+$tablet: 1024;
+
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;

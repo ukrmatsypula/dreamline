@@ -1,0 +1,49 @@
+.social {
+  &__list {
+    display: flex;
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: $base * 13;
+      height: $base * 13;
+      background-color: $gray-300;
+      border-radius: 100%;
+      cursor: pointer;
+      transition: background-color 0.2s linear;
+
+      &:hover {
+        fill: $gray-50;
+        background-color: $gray-50;
+      }
+
+      &:not(:last-child) {
+        margin-right: $base * 6;
+      }
+
+      .icon {
+        fill: $gray-600;
+
+        &--facebook {
+          width: $base * 4;
+          height: $base * 7;
+        }
+
+        &--twitter {
+          width: $base * 6;
+          height: $base * 6;
+        }
+
+        &--dribbble {
+          width: $base * 6;
+          height: $base * 6;
+        }
+
+        &--share {
+          width: $base * 6;
+          height: $base * 6;
+        }
+      }
+    }
+  }
+}
