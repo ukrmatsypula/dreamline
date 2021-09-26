@@ -8,3 +8,18 @@ burger.addEventListener("click", () => {
   burger.classList.toggle("burger--active");
   menu.classList.toggle("nav-wrapper--active");
 });
+
+import $ from "jquery";
+
+$(function () {
+  let navItems = $(".nav-wrapper__item-link").on("click", function (e) {
+    e.preventDefault();
+    let href = $(this).attr("href");
+    let offset = $(this).offset().top;
+
+    $('html, body').animate({
+      scrollTop: offset,
+    }, 500)
+
+  });
+});

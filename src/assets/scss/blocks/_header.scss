@@ -58,6 +58,10 @@
           &:hover {
             text-decoration: underline;
           }
+
+          &--active {
+            background-color: pink;
+          }
         }
       }
 
