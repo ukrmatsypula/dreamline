@@ -14,6 +14,7 @@ import $ from "jquery";
 $(function () {
   let header = $("header");
   let nav = $(".nav-wrapper__item-link");
+  let arrowUp = $(".up");
 
   if (nav) {
     nav.on("click", function (e) {
@@ -36,4 +37,22 @@ $(function () {
       );
     });
   }
+
+  if (arrowUp) {
+    arrowUp.on("click", () => {
+      $("html, body").animate({
+        scrollTop: 0,
+      });
+    });
+  }
+
+  $(window).on("scroll", () => {
+    let offsetTop = $(this).scrollTop();
+
+    if (offsetTop < 250) {
+      arrowUp.slideUp();
+    } else {
+      arrowUp.slideDown();
+    }
+  });
 });

@@ -777,7 +777,8 @@ textarea {
   padding: 0 15px; }
 
 .page {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .txt-center {
   text-align: center; }
@@ -789,3 +790,12 @@ svg {
 
 body.no-scroll {
   overflow: hidden; }
+
+.up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 1.5rem;
+  background-color: pink;
+  color: #fff;
+  border: 0; }
