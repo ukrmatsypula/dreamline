@@ -12,14 +12,28 @@ burger.addEventListener("click", () => {
 import $ from "jquery";
 
 $(function () {
-  let navItems = $(".nav-wrapper__item-link").on("click", function (e) {
-    e.preventDefault();
-    let href = $(this).attr("href");
-    let offset = $(this).offset().top;
+  let header = $("header");
+  let nav = $(".nav-wrapper__item-link");
 
-    $('html, body').animate({
-      scrollTop: offset,
-    }, 500)
+  if (nav) {
+    nav.on("click", function (e) {
+      e.preventDefault();
 
-  });
+      nav.each((index, item) => {
+        $(item).removeClass("nav-wrapper__item-link--active");
+      });
+
+      $(this).addClass("nav-wrapper__item-link--active");
+
+      let href = $(this).attr("href");
+      let offset = $(href).offset().top;
+
+      $("html, body").animate(
+        {
+          scrollTop: offset - header.outerHeight(),
+        },
+        500
+      );
+    });
+  }
 });
