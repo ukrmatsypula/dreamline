@@ -9,13 +9,6 @@ burger.addEventListener("click", () => {
   menu.classList.toggle("nav-wrapper--active");
 });
 
-
-function deductNumber(a + b) {
-    console.log(a - b);
-}
-
-deductNumber(1,2)
-
 import $ from "jquery";
 
 $(function () {
